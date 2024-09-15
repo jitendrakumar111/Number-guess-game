@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Number Guessing</h1>
+        <pre>Developed by- Jitendra</pre>
+
+        <label for="difficulty">Select Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <p>Guess the number between <span id="min-number">1</span> and <span id="max-number">100</span>.</p>
+        <input type="number" id="guess-input" placeholder="Enter your guess" min="1" max="100">
+        <button id="guess-button">Guess</button>
+        <button id="reset-button">Reset</button>
+        
+        <p id="message"></p>
+        <p id="attempts-left-text">Attempts Left: <span id="attempts-left">10</span></p>
+        <p id="guess-history"></p> <!-- Guess History -->
+
+        <!-- Modal for Congratulations -->
+        <div id="congrats-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>🎉 Congratulations! You guessed the number! 🎉</p>
+            </div>
+        </div>
+
+        <!-- Modal for Game Over -->
+        <div id="game-over-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Game Over! The number was <span id="secret-number"></span>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
